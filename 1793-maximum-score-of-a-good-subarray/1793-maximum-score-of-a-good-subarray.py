@@ -74,24 +74,25 @@ class Solution:
                 
             q+=1
             
-        
+        maxscore = 0
         
         p=0
         q = n-1
         
-        maxscore = 0
+        
         
         while p<q:
             maxscore = max(maxscore, min(minArray[p],minArray[q])*(q-p+1))
-            if minArray[p] <= minArray[q]:
+            if minArray[p] <= minArray[q] and p<k:
                 p+=1
                 
-            else:
+            elif q>k:
                 q-=1
                 
         return maxscore
                 
-            
+                
+        
             
             
                 
