@@ -1,53 +1,5 @@
 class Solution:
     def maximumScore(self, nums: List[int], k: int) -> int:
-        '''
-        
-        leftminarray = [0]*n
-        rightminarray = [0]*n
-        leftminarray[0] = nums[0]
-        rightminarray[-1] = nums[-1]
-        maxscore = 0
-            
-        for j in range(1,n):
-            if nums[j]<leftminarray[j-1]:
-                leftminarray[j] = nums[j]
-            else:
-                leftminarray[j] = leftminarray[j-1]
-                
-            if nums[n-1-j] < rightminarray[n-j]:
-                rightminarray[n-1-j] = nums[n-1-j]
-            else:
-                rightminarray[n-1-j] = rightminarray[n-j]
-                
-        print(leftminarray, rightminarray)       
-        p=k
-        q=k
-        
-        while p>0:
-            while q<n:
-                maxscore = max(maxscore, max(rightminarray[p], leftminarray[q])*(q-p+1))
-                print(maxscore)
-                q+=1
-                
-            q=k
-            p-=1
-            
-        return maxscore
-                
-        '''     
-            
-            
-        """
-         p right [1,3,3,4,4,5]
-         q left [1,1,1,1,1,1]
-        
-        
-         p right [1,1,1,1,1,1,1,1]
-        q left [5,5,4,4,4,1,1,1]
-        
-        
-        """
-        
         '''Try 2'''
         n = len(nums)
         if n==1:
