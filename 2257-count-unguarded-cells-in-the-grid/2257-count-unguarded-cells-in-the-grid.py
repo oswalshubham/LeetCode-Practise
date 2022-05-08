@@ -22,11 +22,12 @@ class Solution:
                     
             else:
                 return None
-                
+        
+        memo = {}
         for i,j in guards:
             matrix[i][j] = False
             for l,r in directions:
-                checkInDirection(i,j,l,r)
+                checkInDirection(i,j,l,r, memo)
         count = 0      
         for i in range(m):
             for j in range(n):
